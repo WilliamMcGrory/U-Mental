@@ -6,7 +6,7 @@ const posts = [
   description: "<p>Første side</p>",
   image: "https://image.ibb.co/bF9iO5/1.jpg",
   clip_path: "polygon(50% 0%, 70% 50%, 80% 100%, 0% 50%)", 
-  link: "https://www.youtube.com/embed/DmHjcqNiN6k"
+  link: "https://www.youtube.com/embed/DmHjcqNiN6k",
 },
 
 {

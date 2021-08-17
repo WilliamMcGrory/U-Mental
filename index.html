@@ -10,6 +10,8 @@
 <body>
 <!-- partial:index.partial.html -->
 <div id="app">
+
+  <!--Hovedsiden til et element i listen-->
   <div :class="['post-view', selected ? 'post-view--active' : '' , ready ? 'post-view--ready' : '' ]">
     <div class="post-view__image" :style="'background-image:url('+postImage+');clip-path:'+clipPath">
     </div>
@@ -21,10 +23,13 @@
       </div>
       <h2 class="post-view__title">{{currentPost.title}}</h2>
       <h3 class="post-view__date">{{currentPost.date}}</h3>
-      <div class="post-view__content" v-html="currentPost.description"></div>
-      <iframe v-if="currentPost.link" width="560" height="315" :src="currentPost.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="post-view__content">
+        <div v-html="currentPost.description"></div>
+        <iframe v-if="currentPost.link" height="315" :src="currentPost.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div> 
     </div>
   </div>
+  <!---->
 
   <!-- Listen på første side, v-for betyr liste -->
   <div :class="['post-list', selected ? 'post-list--hide' : '']">
