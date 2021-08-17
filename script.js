@@ -5,7 +5,9 @@ const posts = [
   date: "01 May 2017",
   description: "<p>Første side</p>",
   image: "https://image.ibb.co/bF9iO5/1.jpg",
-  clip_path: "polygon(50% 0%, 70% 50%, 80% 100%, 0% 50%)" },
+  clip_path: "polygon(50% 0%, 70% 50%, 80% 100%, 0% 50%)", 
+  link: "https://www.youtube.com/embed/DmHjcqNiN6k"
+},
 
 {
   id: 2,
@@ -13,7 +15,9 @@ const posts = [
   date: "04 April 2017",
   description: "<p>Andre side<\/p>",
   image: "https://image.ibb.co/dwDXGQ/2.jpg",
-  clip_path: "polygon(31% 23%, 90% 30%, 50% 100%, 0% 50%)" },
+  clip_path: "polygon(31% 23%, 90% 30%, 50% 100%, 0% 50%)",
+  link: "https://www.youtube.com/embed/OtJzOPAJyVU"
+},
 
 {
   id: 3,
@@ -21,7 +25,8 @@ const posts = [
   date: "22 March 2017",
   description: "<p>tredje side</p>",
   image: "https://image.ibb.co/gnWKwQ/3.jpg",
-  clip_path: "polygon(0 29%, 100% 0, 100% 70%, 48% 100%)" },
+  clip_path: "polygon(0 29%, 100% 0, 100% 70%, 48% 100%)" 
+},
 
 {
   id: 4,
@@ -29,7 +34,8 @@ const posts = [
   date: "12 February 2017",
   description: "<p>fjerde side side</p>",
   image: "https://image.ibb.co/cTfZVk/4.jpg",
-  clip_path: "polygon(24% 0, 90% 30%, 79% 78%, 13% 76%)" },
+  clip_path: "polygon(24% 0, 90% 30%, 79% 78%, 13% 76%)" 
+},
 
 {
   id: 5,
@@ -37,7 +43,8 @@ const posts = [
   date: "25 January 2017",
   description: "<p>femte side</p>",
   image: "https://image.ibb.co/e12RbQ/5.jpg",
-  clip_path: "polygon(0 100%, 46% 0, 100% 70%, 49% 69%)" }];
+  clip_path: "polygon(0 100%, 46% 0, 100% 70%, 49% 69%)" 
+}];
 
 
 
