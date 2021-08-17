@@ -29,7 +29,9 @@
   <!-- Listen på første side, v-for betyr liste -->
   <div :class="['post-list', selected ? 'post-list--hide' : '']">
     <div class="post" v-for="(item, index) in posts" v-on:mouseenter="changePost(index)" @click="selectedPost(index)">
-      <h2 class="post__title">{{item.title}} <span class="post__date">{{item.date}}</span></h2>
+      <h2 class="post__title">{{item.title}} 
+        <span class="post__date">{{item.date}}</span>
+      </h2>
     </div>
   </div>
   <!---->
