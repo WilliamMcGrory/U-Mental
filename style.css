@@ -21,9 +21,13 @@ label.logo{
   padding: 0 100px;
   font-weight: bold;
 }
-nav ul{
+ nav ul{
 float: right;
 margin-right: 20 px;
+
+}
+nav li{
+
 
 }
 
