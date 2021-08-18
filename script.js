@@ -3,7 +3,7 @@ const posts = [
   id: 1,
   title: "Composer - Wanja Hamre",
   date: "30 Okt 2020",
-  description: "<p>Første side</p>",
+  description: "<p>From love to hate. A story of deception and the stages of grief from hate to acceptance. We give you Composer</p>",
   image: "https://image.ibb.co/bF9iO5/1.jpg",
   clip_path: "polygon(50% 0%, 70% 50%, 80% 100%, 0% 50%)", 
   link: "https://www.youtube.com/embed/DmHjcqNiN6k",
