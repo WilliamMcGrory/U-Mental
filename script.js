@@ -1,8 +1,8 @@
 const posts = [
 {
   id: 1,
-  title: "William",
-  date: "01 May 2017",
+  title: "Composer - Wanja Hamre",
+  date: "30 Okt 2020",
   description: "<p>Første side</p>",
   image: "https://image.ibb.co/bF9iO5/1.jpg",
   clip_path: "polygon(50% 0%, 70% 50%, 80% 100%, 0% 50%)", 
