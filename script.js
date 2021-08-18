@@ -11,8 +11,8 @@ const posts = [
 
 {
   id: 2,
-  title: "Man bun leggings green juice quinoa",
-  date: "04 April 2017",
+  title: "Dancing with the Devil | Dear Diary",
+  date: "30. jun 2021",
   description: "<p>Andre side<\/p>",
   image: "https://image.ibb.co/dwDXGQ/2.jpg",
   clip_path: "polygon(31% 23%, 90% 30%, 50% 100%, 0% 50%)",
@@ -21,11 +21,12 @@ const posts = [
 
 {
   id: 3,
-  title: "Ramps activated charcoal tumeric",
+  title: "Taking care of them all",
   date: "22 March 2017",
   description: "<p>tredje side</p>",
   image: "https://image.ibb.co/gnWKwQ/3.jpg",
-  clip_path: "polygon(0 29%, 100% 0, 100% 70%, 48% 100%)" 
+  clip_path: "polygon(0 29%, 100% 0, 100% 70%, 48% 100%)",
+  link: "www.youtube.com/embed/wt8PEjJvH6w" 
 },
 
 {
