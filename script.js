@@ -22,8 +22,8 @@ const posts = [
 {
   id: 3,
   title: "Taking care of them all",
-  date: "22 March 2017",
-  description: "<p>tredje side</p>",
+  date: "30 sep. 2020",
+  description: "<p>A heartwrecking, honest and real tribute to PTSD</p>",
   image: "https://image.ibb.co/gnWKwQ/3.jpg",
   clip_path: "polygon(0 29%, 100% 0, 100% 70%, 48% 100%)",
   link: "https://www.youtube.com/embed/wt8PEjJvH6w" 
@@ -40,6 +40,15 @@ const posts = [
 
 {
   id: 5,
+  title: "Try-hard meggings raclette bitters",
+  date: "12 February 2017",
+  description: "<p>fjerde side side</p>",
+  image: "https://image.ibb.co/cTfZVk/4.jpg",
+  clip_path: "polygon(24% 0, 90% 30%, 79% 78%, 13% 76%)" 
+},
+
+{
+  id: 6,
   title: "Mustache celiac bespoke freegan",
   date: "25 January 2017",
   description: "<p>femte side</p>",
