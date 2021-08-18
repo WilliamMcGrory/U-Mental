@@ -26,7 +26,7 @@ const posts = [
   description: "<p>tredje side</p>",
   image: "https://image.ibb.co/gnWKwQ/3.jpg",
   clip_path: "polygon(0 29%, 100% 0, 100% 70%, 48% 100%)",
-  link: "www.youtube.com/embed/wt8PEjJvH6w" 
+  link: "https://www.youtube.com/embed/wt8PEjJvH6w" 
 },
 
 {
