@@ -36,7 +36,7 @@ const posts = [
   description: "<p>fjerde side side</p>",
   image: "https://image.ibb.co/cTfZVk/4.jpg",
   clip_path: "polygon(24% 0, 90% 30%, 79% 78%, 13% 76%)",
-  Link: "https://www.youtube.com/embed/5aOMZ5Ctgr8" 
+  Link: "https://www.youtube.com/embed/NykgxTtJxNM"
 },
 
 {
