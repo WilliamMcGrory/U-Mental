@@ -1,4 +1,19 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
+nav{
+  display: flex;
+  align-items: center;
+  min-height: 8vh;
+  background-color: turquoise;
+  font-family: 'Poppins', sans-serif;
+}
+.logo{
+  color: whitesmoke;
+}
 * {
   box-sizing: border-box;
 }
