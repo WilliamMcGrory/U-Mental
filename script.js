@@ -1,6 +1,6 @@
 const navSlide = () =>{
     const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-Links');
+    const nav = document.querySelector('.nav-Links')
     const navLinks = document.querySelectorAll('.nav-Links li');
 
 
