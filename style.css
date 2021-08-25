@@ -43,7 +43,7 @@ width: 30%;
 .burger div{
 width: 25px;
 height: 3px;
-background-color: white;
+background-color: rgb(5, 4, 4);
 margin: 5px;
 }
  
@@ -51,7 +51,7 @@ margin: 5px;
 @media screen and (max-width: 1024px){
   .nav-links{
     width: 60%;
-  }  
+    }  
   }
 
 @media screen and (max-width: 768px){
@@ -63,7 +63,7 @@ position: absolute;
 right: 0px;
 height: 92vh;
 top: 8vh;
-background-color: white;
+background-color:rgb(207, 194, 194);
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -78,7 +78,7 @@ transition: transform 0.5s ease-in;
 
 .burger{
   display: block;
-}
+    }
 }
 
 .nav-active{
