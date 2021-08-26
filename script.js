@@ -4,7 +4,7 @@ const navSlide = () =>{
     const navLinks = document.querySelectorAll('.nav-Links li');
 
 
-    burger.addEventListener('click', () => {
+    burger.addEventListener('click',()=>{
       //Toggle Nav 
         nav.classList.toggle ('nav-active');
 
@@ -22,9 +22,6 @@ const navSlide = () =>{
 }
 
 navSlide();
-
-
-
 
 const posts = [
 {
@@ -160,4 +157,5 @@ const app = new Vue({
       e.keyCode == 37 ? this.prevPost() : false;
       e.keyCode == 27 ? this.closePost() : false;
     });
+  navSlide();
   } });
