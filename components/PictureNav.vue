@@ -164,11 +164,11 @@ changePost(index) {
     } },
 
   created() {
-    window.addEventListener("keydown", e => {
-      e.keyCode == 39 ? this.nextPost() : false;
-      e.keyCode == 37 ? this.prevPost() : false;
-      e.keyCode == 27 ? this.closePost() : false;
-    });
+    //window.addEventListener("keydown", e => {
+    //  e.keyCode == 39 ? this.nextPost() : false;
+    //  e.keyCode == 37 ? this.prevPost() : false;
+    //  e.keyCode == 27 ? this.closePost() : false;
+    //});
   }
 }
 </script>
