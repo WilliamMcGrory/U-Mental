@@ -1,7 +1,8 @@
 <template>
   <section class="container">
     <div>
-      <picture-nav />
+      <nav-bar> </nav-bar>
+      <picture-nav> </picture-nav>
       <h1>Hello</h1>
       <NuxtLink to="/test">Home page</NuxtLink>
     </div>
