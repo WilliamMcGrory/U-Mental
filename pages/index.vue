@@ -10,11 +10,13 @@
 </template>
 
 <script>
+import Bottombar from '../components/Bottombar.vue'
 import NavBar from '../components/NavBar.vue'
 import PictureNav from '../components/PictureNav.vue'
 
 export default {
   components: {
+    Bottombar,
     NavBar,
     PictureNav
   },
