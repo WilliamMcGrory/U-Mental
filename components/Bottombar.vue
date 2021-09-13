@@ -33,6 +33,7 @@
 
 <script>
   export default {
+    name: 'bottombar',
     data: () => ({ value: 1 }),
 
     computed: {
