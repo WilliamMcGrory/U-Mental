@@ -1,10 +1,8 @@
 <template>
   <section class="container">
-    <div>
+    <div class="content">
       <nav-bar> </nav-bar>
       <picture-nav> </picture-nav>
-      <h1>Hello</h1>
-      <NuxtLink to="/test">Home page</NuxtLink>
     </div>
   </section>
 </template>
@@ -53,6 +51,11 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.content{
+  position: absolute;
+  top: 0;
 }
 </style>
 

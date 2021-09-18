@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="picture-container">
     <!--Hovedsiden til et element i listen-->
     <div :class="['post-view', selected ? 'post-view--active' : '' , ready ? 'post-view--ready' : '' ]">
         <div class="post-view__image" :style="'background-image:url('+postImage+');clip-path:'+clipPath">
@@ -182,6 +182,11 @@ body {
   font-family: "Inconsolata", monospace;
 }
 
+
+.picture-container{
+  margin-top: 5%;
+}
+
 .post {
   cursor: pointer;
   margin-bottom: 50px;
@@ -210,7 +215,6 @@ body {
   top: 0;
   height: 100%;
   width: 0;
-  z-index: -1;
   transition: width 0.3s ease 0s;
   content: "";
   background: #fbf9bd;
@@ -245,13 +249,13 @@ body {
 .post-view {
   transition: 0.3s ease 0s;
   width: 100%;
-  min-height: 100vh;
-  position: absolute;
   left: 0;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10%;
+  position: absolute;
 }
 .post-view__date {
   font-family: "Inconsolata", monospace;
@@ -297,14 +301,23 @@ body {
 .post-view__content p:last-child {
   margin-bottom: 0;
 }
+
 .post-view--active .post-view__image {
+  position: absolute;
   background-position: top;
   transition: all 0.6s ease 0s;
   width: 100%;
-  height: 520px;
-  margin-top: 0;
+  height: 100vh;
   top: 0;
+  margin-top: 10%;
 }
+
+@media only screen and (max-width: 768px) {
+  .post-view--active .post-view__image {
+    position: fixed;
+  }
+}
+
 .post-view__title {
   font-size: 2.875em;
   font-weight: bold;
