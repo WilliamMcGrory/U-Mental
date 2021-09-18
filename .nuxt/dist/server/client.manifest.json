@@ -1,21 +1,21 @@
 {
-  "publicPath": "/_nuxt/",
+  "publicPath": "/eksempel/_nuxt/",
   "all": [
     "../server/index.spa.html",
     "../server/index.ssr.html",
     "1cd5d6395a33a1c329bf.js",
     "2b271bf7b3d4ecb0ed01.js",
     "3f90dd7aada06c5a2d3f.js",
-    "50817320c94218dc746b.js",
+    "741744591cd0dcea18b8.js",
     "7d7379a6cd008c4eff91.js",
-    "805039d673e58a7f0a83.js",
+    "99d4d4ecca8b6137349f.js",
     "LICENSES",
     "d1224971e2335d66a226.js"
   ],
   "initial": [
-    "805039d673e58a7f0a83.js",
+    "99d4d4ecca8b6137349f.js",
     "d1224971e2335d66a226.js",
-    "50817320c94218dc746b.js"
+    "741744591cd0dcea18b8.js"
   ],
   "async": [
     "1cd5d6395a33a1c329bf.js",
@@ -497,9 +497,9 @@
     "1cd5d6395a33a1c329bf.js": "448d4de9",
     "2b271bf7b3d4ecb0ed01.js": "587c41d6",
     "3f90dd7aada06c5a2d3f.js": "2a130dde",
-    "50817320c94218dc746b.js": "1a3ae26b",
+    "741744591cd0dcea18b8.js": "1a3ae26b",
     "7d7379a6cd008c4eff91.js": "693e5a2b",
-    "805039d673e58a7f0a83.js": "6fca0322",
+    "99d4d4ecca8b6137349f.js": "6fca0322",
     "d1224971e2335d66a226.js": "0859c165"
   }
 }
