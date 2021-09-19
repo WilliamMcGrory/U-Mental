@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 const _eb3dd292 = () => interopDefault(import('../pages/example.vue' /* webpackChunkName: "pages/example" */))
 const _4ada063a = () => interopDefault(import('../pages/faq.vue' /* webpackChunkName: "pages/faq" */))
 const _79e9e6f9 = () => interopDefault(import('../pages/information.vue' /* webpackChunkName: "pages/information" */))
+const _00d96a95 = () => interopDefault(import('../pages/test.vue' /* webpackChunkName: "pages/test" */))
 const _3329a35f = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
@@ -76,7 +77,7 @@ const scrollBehavior = function (to, from, savedPosition) {
 export function createRouter() {
   return new Router({
     mode: 'history',
-    base: '/eksempel',
+    base: '/',
     linkActiveClass: 'nuxt-link-active',
     linkExactActiveClass: 'nuxt-link-exact-active',
     scrollBehavior,
@@ -93,6 +94,10 @@ export function createRouter() {
       path: "/information",
       component: _79e9e6f9,
       name: "information"
+    }, {
+      path: "/test",
+      component: _00d96a95,
+      name: "test"
     }, {
       path: "/",
       component: _3329a35f,

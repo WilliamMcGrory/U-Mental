@@ -1,14 +1,24 @@
 <template>
   <section class="container">
     <div class="content">
-      <h1>YO</h1>
+      <nav-bar></nav-bar>
+      <h1 @click="clickme">Dette er en test</h1>
     </div>
   </section>
 </template>
 
 <script>
+import NavBar from "../components/NavBar.vue";
+
 export default {
-  components: {},
+  components: {
+    NavBar,
+  },
+  methods: {
+    clickme() {
+      alert("Hello");
+    },
+  },
 };
 </script>
 

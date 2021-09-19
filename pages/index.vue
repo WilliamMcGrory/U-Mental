@@ -8,22 +8,19 @@
 </template>
 
 <script>
-import Bottombar from '../components/Bottombar.vue'
-import NavBar from '../components/NavBar.vue'
-import PictureNav from '../components/PictureNav.vue'
+import NavBar from "../components/NavBar.vue";
+import PictureNav from "../components/PictureNav.vue";
 
 export default {
   components: {
-    Bottombar,
     NavBar,
-    PictureNav
+    PictureNav,
   },
-  methods:{
-  }
-}
+  methods: {},
+};
 </script>
 
-<style>
+<style lang="scss">
 .container {
   min-height: 100vh;
   display: flex;
@@ -33,7 +30,8 @@ export default {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -53,9 +51,8 @@ export default {
   padding-top: 15px;
 }
 
-.content{
+.content {
   position: absolute;
   top: 0;
 }
 </style>
-

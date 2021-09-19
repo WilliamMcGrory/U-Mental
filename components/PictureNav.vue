@@ -173,7 +173,7 @@ changePost(index) {
 }
 </script>
 
-<style>
+<style lang="scss">
 * {
   box-sizing: border-box;
 }
