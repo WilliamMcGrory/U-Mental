@@ -2,19 +2,22 @@
   <section class="container">
     <div class="content">
       <nav-bar></nav-bar>
+      <image-slider> </image-slider>
       <h1>information</h1>
     </div>
   </section>
 </template>
 
 <script>
-import NavBar from '../components/NavBar.vue'
+import ImageSlider from "../components/ImageSlider.vue";
+import NavBar from "../components/NavBar.vue";
 
 export default {
   components: {
-    NavBar
-  }
-}
+    NavBar,
+    ImageSlider,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -26,10 +29,8 @@ export default {
   text-align: center;
 }
 
-.content{
+.content {
   position: absolute;
   top: 0;
 }
-
 </style>
-

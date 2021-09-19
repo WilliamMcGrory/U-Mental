@@ -1,103 +1,132 @@
 <template>
-    <div class="picture-container">
+  <div class="picture-container">
     <!--Hovedsiden til et element i listen-->
-    <div :class="['post-view', selected ? 'post-view--active' : '' , ready ? 'post-view--ready' : '' ]">
-        <div class="post-view__image" :style="'background-image:url('+postImage+');clip-path:'+clipPath">
-        </div>
-        <div class="post-view__container" v-if="selected">
+    <div
+      :class="[
+        'post-view',
+        selected ? 'post-view--active' : '',
+        ready ? 'post-view--ready' : '',
+      ]"
+    >
+      <div
+        class="post-view__image"
+        :style="'background-image:url(' + postImage + ');clip-path:' + clipPath"
+      ></div>
+      <div class="post-view__container" v-if="selected">
         <div class="post-controls">
-            <div class="post-control post-control--close" @click="closePost()"><i class="ion-ios-close-empty"></i></div>
-            <div class="post-control" id="next-post" @click="nextPost()"><i class="ion-ios-arrow-right"></i></div>
-            <div class="post-control" id="prev-post" @click="prevPost()"><i class="ion-ios-arrow-left"></i></div>
+          <div class="post-control post-control--close" @click="closePost()">
+            <i class="ion-ios-close-empty"></i>
+          </div>
+          <div class="post-control" id="next-post" @click="nextPost()">
+            <i class="ion-ios-arrow-right"></i>
+          </div>
+          <div class="post-control" id="prev-post" @click="prevPost()">
+            <i class="ion-ios-arrow-left"></i>
+          </div>
         </div>
-        <h2 class="post-view__title">{{currentPost.title}}</h2>
-        <h3 class="post-view__date">{{currentPost.date}}</h3>
+        <h2 class="post-view__title">{{ currentPost.title }}</h2>
+        <h3 class="post-view__date">{{ currentPost.date }}</h3>
         <div class="post-view__content">
-            <div v-html="currentPost.description"></div>
-            <iframe v-if="currentPost.link" height="315" :src="currentPost.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div v-html="currentPost.description"></div>
+          <iframe
+            v-if="currentPost.link"
+            height="315"
+            :src="currentPost.link"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
-        </div>
+      </div>
     </div>
     <!---->
 
     <!-- Listen på første side, v-for betyr liste -->
     <div :class="['post-list', selected ? 'post-list--hide' : '']">
-        <div class="post" v-for="(item, index) in posts" :key="item.id" @mouseenter="changePost(index)" @click="selectedPost(index)">
-        <h2 class="post__title">{{item.title}} 
-            <span class="post__date">{{item.date}}</span>
+      <div
+        class="post"
+        v-for="(item, index) in posts"
+        :key="item.id"
+        @mouseenter="changePost(index)"
+        @click="selectedPost(index)"
+      >
+        <h2 class="post__title">
+          {{ item.title }}
+          <span class="post__date">{{ item.date }}</span>
         </h2>
-        </div>
+      </div>
     </div>
-    </div>
+  </div>
   <!---->
 </template>
 
 <script>
-
 const posts = [
-{
-  id: 1,
-  title: "Composer - Wanja Hamre",
-  date: "30 Okt 2020",
-  description: "<p>From love to hate. A story of deception and the stages of grief from hate to acceptance. We give you Composer</p>",
-  image: "https://image.ibb.co/bF9iO5/1.jpg",
-  clip_path: "polygon(50% 0%, 70% 50%, 80% 100%, 0% 50%)", 
-  link: "https://www.youtube.com/embed/DmHjcqNiN6k",
-},
-
-{
-  id: 2,
-  title: "Dancing with the Devil | Dear Diary",
-  date: "30. jun 2021",
-  description: "<p>Andre side<\/p>",
-  image: "https://image.ibb.co/dwDXGQ/2.jpg",
-  clip_path: "polygon(31% 23%, 90% 30%, 50% 100%, 0% 50%)",
-  link: "https://www.youtube.com/embed/OtJzOPAJyVU"
-},
-
-{
-  id: 3,
-  title: "Taking care of them all",
-  date: "30 sep. 2020",
-  description: "<p>A heartwrecking, honest and real tribute to PTSD</p>",
-  image: "https://image.ibb.co/gnWKwQ/3.jpg",
-  clip_path: "polygon(0 29%, 100% 0, 100% 70%, 48% 100%)",
-  link: "https://www.youtube.com/embed/wt8PEjJvH6w" 
-},
-
-{
-  id: 4,
-  title: "Train Wreck",
-  date: "12 February 2017",
-  description: "<p>fjerde side side</p>",
-  image: "https://image.ibb.co/cTfZVk/4.jpg",
-  clip_path: "polygon(24% 0, 90% 30%, 79% 78%, 13% 76%)",
-  Link: "https://www.youtube.com/embed/NykgxTtJxNM"
-},
-
-{
-  id: 5,
-  title: "Try-hard meggings raclette bitters",
-  date: "12 February 2017",
-  description: "<p>fjerde side side</p>",
-  image: "https://image.ibb.co/cTfZVk/4.jpg",
-  clip_path: "polygon(24% 0, 90% 30%, 79% 78%, 13% 76%)" 
-},
-
-{
-  id: 6,
-  title: "Mustache celiac bespoke freegan",
-  date: "25 January 2017",
-  description: "<p>femte side</p>",
-  image: "https://image.ibb.co/e12RbQ/5.jpg",
-  clip_path: "polygon(0 100%, 46% 0, 100% 70%, 49% 69%)" 
-}];
-
-export default {
-  components: {
+  {
+    id: 1,
+    title: "Composer - Wanja Hamre",
+    date: "30 Okt 2020",
+    description:
+      "<p>From love to hate. A story of deception and the stages of grief from hate to acceptance. We give you Composer</p>",
+    image: "https://image.ibb.co/bF9iO5/1.jpg",
+    clip_path: "polygon(50% 0%, 70% 50%, 80% 100%, 0% 50%)",
+    link: "https://www.youtube.com/embed/DmHjcqNiN6k",
   },
 
-   data() {
+  {
+    id: 2,
+    title: "Dancing with the Devil | Dear Diary",
+    date: "30. jun 2021",
+    description: "<p>Andre side<\/p>",
+    image: "https://image.ibb.co/dwDXGQ/2.jpg",
+    clip_path: "polygon(31% 23%, 90% 30%, 50% 100%, 0% 50%)",
+    link: "https://www.youtube.com/embed/OtJzOPAJyVU",
+  },
+
+  {
+    id: 3,
+    title: "Taking care of them all",
+    date: "30 sep. 2020",
+    description: "<p>A heartwrecking, honest and real tribute to PTSD</p>",
+    image: "https://image.ibb.co/gnWKwQ/3.jpg",
+    clip_path: "polygon(0 29%, 100% 0, 100% 70%, 48% 100%)",
+    link: "https://www.youtube.com/embed/wt8PEjJvH6w",
+  },
+
+  {
+    id: 4,
+    title: "Train Wreck",
+    date: "12 February 2017",
+    description: "<p>fjerde side side</p>",
+    image: "https://image.ibb.co/cTfZVk/4.jpg",
+    clip_path: "polygon(24% 0, 90% 30%, 79% 78%, 13% 76%)",
+    Link: "https://www.youtube.com/embed/NykgxTtJxNM",
+  },
+
+  {
+    id: 5,
+    title: "Try-hard meggings raclette bitters",
+    date: "12 February 2017",
+    description: "<p>fjerde side side</p>",
+    image: "https://image.ibb.co/cTfZVk/4.jpg",
+    clip_path: "polygon(24% 0, 90% 30%, 79% 78%, 13% 76%)",
+  },
+
+  {
+    id: 6,
+    title: "Mustache celiac bespoke freegan",
+    date: "25 January 2017",
+    description: "<p>femte side</p>",
+    image: "https://image.ibb.co/e12RbQ/5.jpg",
+    clip_path: "polygon(0 100%, 46% 0, 100% 70%, 49% 69%)",
+  },
+];
+
+export default {
+  components: {},
+
+  data() {
     return {
       test: "",
       posts: posts,
@@ -109,13 +138,12 @@ export default {
       ready: false,
       lastSelectedPost: null,
       clipPath: posts[0].clip_path,
-      textData: "Hey på deg"
+      textData: "Hey på deg",
     };
-
   },
 
-  methods:{
-changePost(index) {
+  methods: {
+    changePost(index) {
       if (this.postImage != this.posts[index].image && this.selected == false) {
         this.postImage = this.posts[index].image;
         this.clipPath = this.posts[index].clip_path;
@@ -150,9 +178,9 @@ changePost(index) {
     },
     prevPost() {
       if (
-      this.lastSelectedPost <= this.posts.length - 1 &&
-      this.lastSelectedPost != 0)
-      {
+        this.lastSelectedPost <= this.posts.length - 1 &&
+        this.lastSelectedPost != 0
+      ) {
         this.lastSelectedPost--;
         this.ready = false;
         setTimeout(() => {
@@ -161,7 +189,8 @@ changePost(index) {
           this.ready = true;
         }, 600);
       }
-    } },
+    },
+  },
 
   created() {
     //window.addEventListener("keydown", e => {
@@ -169,11 +198,11 @@ changePost(index) {
     //  e.keyCode == 37 ? this.prevPost() : false;
     //  e.keyCode == 27 ? this.closePost() : false;
     //});
-  }
-}
+  },
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 * {
   box-sizing: border-box;
 }
@@ -182,8 +211,7 @@ body {
   font-family: "Inconsolata", monospace;
 }
 
-
-.picture-container{
+.picture-container {
   margin-top: 5%;
 }
 
@@ -329,7 +357,8 @@ body {
 .post-view--ready .post-view__container {
   opacity: 1;
 }
-.post-view--ready .post-view__date, .post-view--ready .post-view__content {
+.post-view--ready .post-view__date,
+.post-view--ready .post-view__content {
   transform: translateY(0px);
 }
 .post-view--ready .post-view__title {
@@ -422,4 +451,3 @@ body {
   transition: all 0.3s ease 0s;
 }
 </style>
-
